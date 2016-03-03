@@ -2,63 +2,59 @@
 
 BasePath : http://IP:8080/huazhong/
 
-**1.获取短信验证码**
+**1.获取用户对应的公司信息**
 
-`接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724`
+`接口名：companyController!getCompanyInfo.action`
 
-`参数： phoneNum 电话号码`
+`参数： 无`
 
 `返回数据：`
 ```javascript
 {
 	"data": {
-		"SMSVerifyCode": "981179"  短信验证码
+		"pageSize": 20,
+		"currentPage": 1,
+		"topCount": null,
+		"sortColumns": null,
+		"cmd": null,
+		"queryDynamicConditions": {
+			
+		},
+		"sortedConditions": {
+			
+		},
+		"dynamicProperties": {
+			
+		},
+		"success": null,
+		"message": null,
+		"id": 1,
+		"companyName": "华众时代",
+		"companyLogo": "",
+		"licensePic": "",
+		"address": "广州市",
+		"contacts": "MM",
+		"phone": "7758521",
+		"email": "11@qq.com",
+		"userId": 1,
+		"sortColumnsString": ""
 	},
-	"success": true 成功返回数据
-}
-
-{
-	"message": "注册用户名必须为手机号码", 错误信息
-	"success": false 失败返回数据
-}
-```
-**2.获取图片验证码**
-
-`接口名：userController!getVerifyCode.action`
-
-`参数: 无`
-
-`返回数据:`
-
-`验证码图片流`
-
-**3.验证用户名是否已被注册过**
-
-`接口名：userController!isUserNameExists.action?userName=karl`
-
-`参数：userName 用户名`
-
-`返回数据:`
-
-```javascript
-{
-	"message": "该用户名未被使用，可以注册",
 	"success": true
 }
 
 {
-	"message": "该用户名已被注册过，请更换其他用户名",
+	"message": "没有该用户的公司信息",
 	"success": false
 }
 ```
+**2.添加公司信息**
 
-**4.用户注册**
+`接口名：companyController!saveCompanyInfo.action?companyName=华众时代&address=深圳市&contacts=美女&phone=7758521&email=11@qq.com`
 
-`接口名：userController!userRegister.action?userName=karl&phoneNum=15986793724&password=123456&smsVerifycode=9527&verifyCode=abcd`
-
-`参数：userName 用户名 password 密码 phoneNum 电话号码 smsVerifycode 短信验证码 verifyCode 验证码`
+`参数: companyName 公司名称 address 公司地址 contacts 公司联系人 phone 公司联系电话 email 公司邮箱 companyLogo 公司Logo licensePic 营业执照`
 
 `返回数据:`
+
 ```javascript
 {
 	"message": "",
@@ -66,26 +62,49 @@ BasePath : http://IP:8080/huazhong/
 }
 
 {
-	"message": "验证码已过期",
+	"message": "该公司名称已经存在",
 	"success": false
 }
 ```
 
-**5.用户登录**
+**3.修改公司信息**
 
-`接口名：userController!login.action?userName=karl&password=123456&verifyCode=abcd&isRememberPwd=1`
+`接口名：companyController!updateCompanyInfo.action?id=1&address=广州市&contacts=MM`
 
-`参数：userName 用户名 password 密码 verifyCode 验证码 isRememberPwd 是否记住密码(1为记住，0为不记住)`
+`参数：address 公司地址 contacts 公司联系人 *** 参数参考新增公司信息`
 
 `返回数据:`
+
 ```javascript
 {
-	"message": "",
+	"data": {
+		"pageSize": 20,
+		"currentPage": 1,
+		"topCount": null,
+		"sortColumns": null,
+		"cmd": null,
+		"queryDynamicConditions": {
+			
+		},
+		"sortedConditions": {
+			
+		},
+		"dynamicProperties": {
+			
+		},
+		"success": null,
+		"message": null,
+		"id": 1,
+		"companyName": "华众时代",
+		"companyLogo": "",
+		"licensePic": "",
+		"address": "广州市",
+		"contacts": "MM",
+		"phone": "7758521",
+		"email": "11@qq.com",
+		"userId": 1,
+		"sortColumnsString": ""
+	},
 	"success": true
-}
-
-{
-	"message": "用户名错误或已被禁用",
-	"success": false
 }
 ```
