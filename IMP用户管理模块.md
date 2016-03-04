@@ -1,6 +1,6 @@
 
 
-BasePath : http://IP:8080/huazhong/
+BasePath : http://IP:8080/imp/
 
 **1.获取短信验证码**
 
