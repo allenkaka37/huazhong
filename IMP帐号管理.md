@@ -4,48 +4,13 @@ BasePath : http://IP:8080/imp/
 
 **1.获取用户对应的公司信息**
 
-`接口名：alipayController!alipayapi.action`
+`接口名：alipayController!alipayapi.action?WIDtotal_fee=188`
 
-`参数： 无`
+`参数： WIDtotal_fee 充值金额`
 
 `返回数据：`
 ```javascript
-{
-	"data": {
-		"pageSize": 20,
-		"currentPage": 1,
-		"topCount": null,
-		"sortColumns": null,
-		"cmd": null,
-		"queryDynamicConditions": {
-			
-		},
-		"sortedConditions": {
-			
-		},
-		"dynamicProperties": {
-			
-		},
-		"success": null,
-		"message": null,
-		"id": 1,
-		"companyName": "华众时代",
-		"companyLogo": "",
-		"licensePic": "",
-		"address": "广州市",
-		"contacts": "MM",
-		"phone": "7758521",
-		"email": "11@qq.com",
-		"userId": 1,
-		"sortColumnsString": ""
-	},
-	"success": true
-}
 
-{
-	"message": "没有该用户的公司信息",
-	"success": false
-}
 ```
 **2.添加公司信息**
 
