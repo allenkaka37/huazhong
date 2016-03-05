@@ -22,13 +22,31 @@ BasePath : http://IP:8080/imp/
 
 ```javascript
 {
-	"message": "",
+	"data": {
+		"pageSize": 20,
+		"currentPage": 1,
+		"topCount": null,
+		"sortColumns": null,
+		"cmd": null,
+		"queryDynamicConditions": {
+			
+		},
+		"sortedConditions": {
+			
+		},
+		"dynamicProperties": {
+			
+		},
+		"success": null,
+		"message": null,
+		"id": 1,
+		"balance": 0.0,
+		"invalidTime": null,
+		"userId": 1,
+		"smsBalance": 0,
+		"sortColumnsString": ""
+	},
 	"success": true
-}
-
-{
-	"message": "该公司名称已经存在",
-	"success": false
 }
 ```
 
@@ -41,5 +59,40 @@ BasePath : http://IP:8080/imp/
 `返回数据:`
 
 ```javascript
-
+{
+	"data": [{
+		"pageSize": 20,
+		"currentPage": 1,
+		"topCount": null,
+		"sortColumns": null,
+		"cmd": null,
+		"queryDynamicConditions": {
+			
+		},
+		"sortedConditions": {
+			
+		},
+		"dynamicProperties": {
+			
+		},
+		"success": null,
+		"message": null,
+		"id": 1,
+		"payStatus": 1,
+		"createTime": "2016-03-05 14:44:35",
+		"payTime": null,
+		"accountId": 1,
+		"isRecharge": 1,
+		"serviceId": null,
+		"serviceType": null,
+		"serialNumber": "1457160274",
+		"price": 0.01,
+		"amount": null,
+		"summary": "充值",
+		"alipayTradeNo": null,
+		"alipayBuyerEmail": null,
+		"sortColumnsString": ""
+	}],
+	"success": true
+}
 ```
