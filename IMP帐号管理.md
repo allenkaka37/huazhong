@@ -4,7 +4,7 @@ BasePath : http://IP:8080/imp/
 
 **1.获取用户对应的公司信息**
 
-`接口名：alipayController!alipayapi.action?WIDtotal_fee=188`
+`接口名：alipayController!accountRecharge.action?WIDtotal_fee=188`
 
 `参数： WIDtotal_fee 充值金额`
 
