@@ -18,6 +18,55 @@ BasePath : http://IP:8080/imp/
 	androidUrl		安卓下载地址
 	iosSize			ios版本大小
 	androidSize		android版本大小
-	
-
+	icon			应用图标:type=1公众号图标,type=2||3应用图标
+	banner			应用横幅:type=3时下载类型的应用banner
+	focusBackground		公众号关注类型活动需上传的页面底图
+	focusPackage		共周后关注类型活动需上传的礼品包图片
+返回数据:
+	成功示例:
+	{
+	"data": {
+			id: 20,
+			code: null,
+			name: "jubaopen45",
+			supId: null,
+			type: "1",
+			status: "1",
+			maxmember: null,
+			price: null,
+			guideUrl: null,
+			appType: null,
+			registerType: null,
+			imgUrl: null,
+			sendFlag: "0",
+			sendUrl: null,
+			shortDescription: null,
+			appStoreId: null,
+			tencentStore: null,
+			androidUrl: null,
+			iosSize: null,
+			androidSize: null,
+			banner: null,
+			praiseNum: null,
+			perateStep: null,
+			mustDo: null,
+			descritpion: null,
+			createDate: "2016-03-04 16:48:12",
+			sortColumnsString: "",
+			remark:"",
+			focusPackage:"",
+			focusBackground:""
+		},
+		"success": true
+	}
+	异常示例1:
+	{
+		"message": "保存应用信息失败", 错误信息
+		"success": false 
+	}
+	异常示例2:
+	{
+		"message":"图标上传失败",
+		"success":false
+	}
 ```
