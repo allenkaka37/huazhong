@@ -1,6 +1,6 @@
 BasePath : http://IP:8080/imp/
-**1.获取短信验证码**
-**1.添加营销活动 **
+
+**1.添加营销活动**
 
 `接口名称:  activityController!saveActivityInfo.action`
 `参数描述:  type			对应活动类型:1-关注,2-注册,3-下载`
