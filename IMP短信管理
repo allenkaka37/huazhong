@@ -27,22 +27,22 @@ BasePath : http://IP:8080/imp/
 	"success": false
 }
 ```
-**2.添加公司信息**
+**2.发送短信**
 
-`接口名：companyController!saveCompanyInfo.action?companyName=华众时代&address=深圳市&contacts=美女&phone=7758521&email=11@qq.com`
+`接口名：SMScontroller!sendSMS.action?content=三三四四嗖嗖嗖&phoneNums=15986793724,13480117676`
 
-`参数: companyName 公司名称 address 公司地址 contacts 公司联系人 phone 公司联系电话 email 公司邮箱 companyLogo 公司Logo licensePic 营业执照`
+`参数: phoneNums 电话号码（多个中间用英文逗号隔开） content 短信内容`
 
 `返回数据:`
 
 ```javascript
 {
-	"message": "",
+	"message": "发送成功",
 	"success": true
 }
 
 {
-	"message": "该公司名称已经存在",
+	"message": "发送失败",
 	"success": false
 }
 ```
