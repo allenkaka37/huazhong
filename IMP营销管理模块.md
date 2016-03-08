@@ -61,16 +61,16 @@ BasePath : http://IP:8080/imp/
 	}
 	异常示例1:
 	{
-		"message": "保存应用信息失败", 错误信息
+		"message": "保存应用信息失败", 错误信息描述
 		"success": false 
 	}
 	异常示例2:
 	{
-		"message":"图标上传失败",
+		"message":"图标上传失败",错误信息描述
 		"success":false
 	}
 ```
-**1.修改营销活动**
+**1.修改当前用户指定的营销活动**
 ```javascript
 	营销类活动只能在待审核状态下允许修改操作!
 接口名称:activityController!updateActivityInfo.action
@@ -132,12 +132,12 @@ BasePath : http://IP:8080/imp/
 	}
 	异常示例1:
 	{
-		"message": "修改应用信息失败", 错误信息
+		"message": "修改应用信息失败", 错误信息描述
 		"success": false 
 	}
 	异常示例2:
 	{
-		"message":"图标上传失败", 某图片上传失败
+		"message":"图标上传失败", 错误信息描述
 		"success":false
 	}
 	异常示例3:
@@ -152,12 +152,138 @@ BasePath : http://IP:8080/imp/
 	}
 ```
 
-**3.获取指定应用信息**
+**3.获取当前用户指定的应用信息**
 ```javascript
 接口名称:activityController!getActivityInfo.action
 参数描述:
-	id
+	id			营销活动id
 返回数据:
+	成功示例:
+	{
+	"data": {
+			id: 20,
+			code: null,
+			name: "jubaopen45",
+			supId: null,
+			type: "1",
+			status: "1",
+			maxmember: 2000,
+			price: null,
+			guideUrl: null,
+			appType: null,
+			registerType: null,
+			imgUrl: null,
+			sendFlag: "0",
+			sendUrl: null,
+			shortDescription: null,
+			appStoreId: null,
+			tencentStore: null,
+			androidUrl: null,
+			iosSize: null,
+			androidSize: null,
+			banner: null,
+			praiseNum: null,
+			perateStep: null,
+			mustDo: null,
+			descritpion: null,
+			createDate: "2016-03-04 16:48:12",
+			sortColumnsString: "",
+			remark:"",
+			focusPackage:"",
+			focusBackground:""
+		},
+		"success": true
+	}
+	异常示例1:
+	{
+		"message": "应用信息不存在", 错误信息描述
+		"success": false 
+	}
+```
+**4.获取当前用户所有的营销活动**
+```javascript
+接口地址:activityController!getActivityList.action
+参数描述:
+	pageSize			每页展示的条数
+	currentPage			当前请求的页数
+返回数据:
+	成功示例:
+	data: {
+		resultList: [
+			{
+				id: 1,
+				serviceOrderId: null,
+				code: null,
+				userId: 1,
+				name: "jubaopen",
+				supId: null,
+				type: "1",
+				status: "1",
+				maxmember: null,
+				price: null,
+				guideUrl: null,
+				appType: null,
+				registerType: null,
+				imgUrl: null,
+				sendFlag: "0",
+				sendUrl: null,
+				shortDescription: null,
+				appStoreId: null,
+				tencentStore: null,
+				androidUrl: null,
+				iosSize: null,
+				androidSize: null,
+				banner: null,
+				praiseNum: null,
+				perateStep: null,
+				mustDo: null,
+				descritpion: null,
+				focusBackground: null,
+				focusPackage: null,
+				remark: null,
+				createDate: null,
+			},
+			{
+				id: 17,
+				serviceOrderId: null,
+				code: null,
+				userId: 1,
+				name: "jubaopen12",
+				supId: null,
+				type: "1",
+				status: "1",
+				maxmember: null,
+				price: null,
+				guideUrl: null,
+				appType: null,
+				registerType: null,
+				imgUrl: null,
+				sendFlag: "0",
+				sendUrl: null,
+				shortDescription: null,
+				appStoreId: null,
+				tencentStore: null,
+				androidUrl: null,
+				iosSize: null,
+				androidSize: null,
+				banner: null,
+				praiseNum: null,
+				perateStep: null,
+				mustDo: null,
+				descritpion: null,
+				focusBackground: null,
+				focusPackage: null,
+				remark: null,
+				createDate: "2016-03-04 16:47:43",
+			}
+		],
+		totalCount: 2
+	}
+	异常示例:
+	{
+		"message": "获取活动列表失败", 错误信息描述
+		"success": false 
+	}
 ```
 
 **1.修改营销活动**
