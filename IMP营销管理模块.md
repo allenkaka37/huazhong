@@ -1,5 +1,7 @@
 BasePath : http://IP:8080/imp/
 
+**测试阶段无法获取登录用户,只调用接口请求数据时,所有接口请求时加入参数 isTest=true, 使用默认用户 id=1**
+
 **1.添加营销活动**
 ```javascript
 接口名称:  activityController!saveActivityInfo.action
