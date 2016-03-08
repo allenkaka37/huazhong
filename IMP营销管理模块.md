@@ -199,6 +199,11 @@ BasePath : http://IP:8080/imp/
 		"message": "应用信息不存在", 错误信息描述
 		"success": false 
 	}
+	异常示例2:
+	{
+		"message": "获取活动信息失败", 错误信息描述
+		"success": false 
+	}
 ```
 **4.获取当前用户所有的营销活动**
 ```javascript
@@ -207,77 +212,88 @@ BasePath : http://IP:8080/imp/
 	pageSize			每页展示的条数
 	currentPage			当前请求的页数
 返回数据:
-	成功示例:
-	data: {
-		resultList: [
-			{
-				id: 1,
-				serviceOrderId: null,
-				code: null,
-				userId: 1,
-				name: "jubaopen",
-				supId: null,
-				type: "1",
-				status: "1",
-				maxmember: null,
-				price: null,
-				guideUrl: null,
-				appType: null,
-				registerType: null,
-				imgUrl: null,
-				sendFlag: "0",
-				sendUrl: null,
-				shortDescription: null,
-				appStoreId: null,
-				tencentStore: null,
-				androidUrl: null,
-				iosSize: null,
-				androidSize: null,
-				banner: null,
-				praiseNum: null,
-				perateStep: null,
-				mustDo: null,
-				descritpion: null,
-				focusBackground: null,
-				focusPackage: null,
-				remark: null,
-				createDate: null,
-			},
-			{
-				id: 17,
-				serviceOrderId: null,
-				code: null,
-				userId: 1,
-				name: "jubaopen12",
-				supId: null,
-				type: "1",
-				status: "1",
-				maxmember: null,
-				price: null,
-				guideUrl: null,
-				appType: null,
-				registerType: null,
-				imgUrl: null,
-				sendFlag: "0",
-				sendUrl: null,
-				shortDescription: null,
-				appStoreId: null,
-				tencentStore: null,
-				androidUrl: null,
-				iosSize: null,
-				androidSize: null,
-				banner: null,
-				praiseNum: null,
-				perateStep: null,
-				mustDo: null,
-				descritpion: null,
-				focusBackground: null,
-				focusPackage: null,
-				remark: null,
-				createDate: "2016-03-04 16:47:43",
-			}
-		],
-		totalCount: 2
+	成功示例1:
+	{
+		data: {
+			resultList: [
+				{
+					id: 1,
+					serviceOrderId: null,
+					code: null,
+					userId: 1,
+					name: "jubaopen",
+					supId: null,
+					type: "1",
+					status: "1",
+					maxmember: null,
+					price: null,
+					guideUrl: null,
+					appType: null,
+					registerType: null,
+					imgUrl: null,
+					sendFlag: "0",
+					sendUrl: null,
+					shortDescription: null,
+					appStoreId: null,
+					tencentStore: null,
+					androidUrl: null,
+					iosSize: null,
+					androidSize: null,
+					banner: null,
+					praiseNum: null,
+					perateStep: null,
+					mustDo: null,
+					descritpion: null,
+					focusBackground: null,
+					focusPackage: null,
+					remark: null,
+					createDate: null,
+				},
+				{
+					id: 17,
+					serviceOrderId: null,
+					code: null,
+					userId: 1,
+					name: "jubaopen12",
+					supId: null,
+					type: "1",
+					status: "1",
+					maxmember: null,
+					price: null,
+					guideUrl: null,
+					appType: null,
+					registerType: null,
+					imgUrl: null,
+					sendFlag: "0",
+					sendUrl: null,
+					shortDescription: null,
+					appStoreId: null,
+					tencentStore: null,
+					androidUrl: null,
+					iosSize: null,
+					androidSize: null,
+					banner: null,
+					praiseNum: null,
+					perateStep: null,
+					mustDo: null,
+					descritpion: null,
+					focusBackground: null,
+					focusPackage: null,
+					remark: null,
+					createDate: "2016-03-04 16:47:43",
+				}
+			],
+			totalCount: 2
+		},
+		success:true
+	}
+	成功示例2:
+	{
+		data: {
+			resultList: [ ],
+			totalCount: 0
+		},
+		success: true
 	}
 	异常示例:
 	{
@@ -286,7 +302,72 @@ BasePath : http://IP:8080/imp/
 	}
 ```
 
-**1.修改营销活动**
+**5.客户上架营销活动**
 ```javascript
-
+	只有当营销活动为status=2(审核通过待支付)时,才能执行该动作(支付并上架)
+接口名称: activityController!updateActivityShelve.action
+参数描述:
+	id			营销活动的id
+返回数据:
+	成功示例:
+	{
+		"message": "", 
+		"success": true 
+	}
+	异常示例1:
+	{
+		"message": "该应用信息不存在或者您无权限操作", 错误信息描述
+		"success": false 
+	}
+	异常示例2:
+	{
+		"message": "当前状态不允许上架操作", 错误信息描述
+		"success": false 
+	}
+	异常示例3:
+	{
+		"message": "账户中心余额不足,请充值", 错误信息描述
+		"success": false 
+	}
+	异常示例4:
+	{
+		"message": "应用信息上架失败", 错误信息描述
+		"success": false 
+	}
 ```
+
+**6.追加营销活动的上限值**
+```javascript
+	该动作只允许在应用status=4已上架,或者status=5已结束的状态下进行追加
+接口名称: activityController!updateMaxmember.action
+参数描述:
+	id			营销活动的id
+	addNum			追加的人数
+返回数据:
+	成功示例:
+	{
+		"message": "", 
+		"success": true 
+	}
+	异常示例1:
+	{
+		"message": "获取应用信息失败", 错误信息描述
+		"success": false 
+	}
+	异常示例2:
+	{
+		"message": "该应用信息不存在或者您无权操作", 错误信息描述
+		"success": false 
+	}
+	异常示例3:
+	{
+		"message": "账户中心余额不足,请充值", 错误信息描述
+		"success": false 
+	}
+	异常示例4:
+	{
+		"message": "应用追加参与上限失败", 错误信息描述
+		"success": false 
+	}
+```
+
