@@ -4,9 +4,9 @@ BasePath : http://IP:8080/imp/
 
 **1.获取用户注册短信验证码**
 
-`接口名：userController!getSMSVerifyCode.action?userName=Karl&phoneNum=15986793724&verifyCode=abcd`
+`接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724&verifyCode=abcd`
 
-`参数：userName 用户名 phoneNum 电话号码 verifyCode 图片验证码`
+`参数：phoneNum 电话号码 verifyCode 图片验证码`
 
 `返回数据：`
 ```javascript
@@ -32,7 +32,27 @@ BasePath : http://IP:8080/imp/
 
 `验证码图片流`
 
-**3.用户注册**
+
+**3. 验证将要注册的用户名及手机号码是否被注册过 **
+
+`接口名：userController!verifyRegisterInfo.action?userName=Karl&phoneNum=15986793724`
+
+`参数：userName 用户名 phoneNum 电话号码`
+
+`返回数据：`
+```javascript
+{
+	"message": ""
+	"success": true 成功返回数据
+}
+
+{
+	"message": "该用户名已被注册过，请更换其他用户名
+	"success": false 失败返回数据
+}
+```
+
+**4.用户注册**
 
 `接口名：userController!userRegister.action?userName=karl&phoneNum=15986793724&password=123456&smsVerifycode=9527&verifyCode=abcd`
 
@@ -51,7 +71,7 @@ BasePath : http://IP:8080/imp/
 }
 ```
 
-**4.用户登录**
+**5.用户登录**
 
 `接口名：userController!login.action?userName=karl&password=123456&verifyCode=abcd&isRememberPwd=1`
 
@@ -70,7 +90,7 @@ BasePath : http://IP:8080/imp/
 }
 ```
 
-**5.用户登出**
+**6.用户登出**
 
 `接口名：userController!logout.action`
 `参数：无`
@@ -78,7 +98,7 @@ BasePath : http://IP:8080/imp/
 `返回数据: 无`
 
 
-**6.修改密码**
+**7.修改密码**
 
 `接口名：userController!editPassword.action?oldPassword=123456&newPassword=111111&smsVerifycode=778111`
 
@@ -97,7 +117,7 @@ BasePath : http://IP:8080/imp/
 }
 ```
 
-**7.忘记密码，重置密码**
+**8.忘记密码，重置密码**
 
 `接口名：userController!resetPassword.action?userName=karl&phoneNum=15986793724&smsVerifycode=778111&password=111111`
 
@@ -116,7 +136,7 @@ BasePath : http://IP:8080/imp/
 }
 ```
 
-**8.获取忘记密码重置的验证码**
+**9.获取忘记密码重置的验证码**
 
 `接口名：userController!getResetPwdSMSVerifyCode.action?userName=karl&phoneNum=15986793724&verifyCode=abcd`
 
