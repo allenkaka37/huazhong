@@ -115,3 +115,41 @@ BasePath : http://IP:8080/imp/
 	"success": false
 }
 ```
+
+**8.忘记密码，重置密码**
+
+`接口名：userController!resetPassword.action?userName=karl&phoneNum=15986793724&smsVerifycode=778111&password=111111`
+
+`参数：userName 用户名 phoneNum 电话号码 smsVerifycode 短信验证码 password 重置的密码`
+
+`返回数据:`
+```javascript
+{
+	"message": "",
+	"success": true
+}
+
+{
+	"message": "用户名和电话号码不匹配",
+	"success": false
+}
+```
+
+**9.获取忘记密码重置的验证码**
+
+`接口名：userController!getResetPwdSMSVerifyCode.action?userName=karl&phoneNum=15986793724`
+
+`参数：userName 用户名 phoneNum 电话号码`
+
+`返回数据:`
+```javascript
+{
+	"message": "",
+	"success": true
+}
+
+{
+	"message": "用户名和电话号码不匹配",
+	"success": false
+}
+```
