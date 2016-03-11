@@ -4,9 +4,9 @@ BasePath : http://IP:8080/imp/
 
 **1.获取用户注册短信验证码**
 
-`接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724`
+`接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724&verifyCode=abcd`
 
-`参数： phoneNum 电话号码`
+`参数： phoneNum 电话号码 verifyCode 图片验证码`
 
 `返回数据：`
 ```javascript
@@ -24,9 +24,9 @@ BasePath : http://IP:8080/imp/
 ```
 **2.获取图片验证码**
 
-`接口名：userController!getVerifyCode.action`
+`接口名：userController!getVerifyCode.action?phoneNum=15986793724`
 
-`参数: 无`
+`参数: phoneNum 电话号码`
 
 `返回数据:`
 
@@ -56,7 +56,7 @@ BasePath : http://IP:8080/imp/
 
 `接口名：userController!userRegister.action?userName=karl&phoneNum=15986793724&password=123456&smsVerifycode=9527&verifyCode=abcd`
 
-`参数：userName 用户名 password 密码 phoneNum 电话号码 smsVerifycode 短信验证码 verifyCode 验证码`
+`参数：userName 用户名 password 密码 phoneNum 电话号码 smsVerifycode 短信验证码 verifyCode 图片验证码`
 
 `返回数据:`
 ```javascript
@@ -96,6 +96,7 @@ BasePath : http://IP:8080/imp/
 `参数：无`
 
 `返回数据: 无`
+
 
 **7.修改密码**
 
