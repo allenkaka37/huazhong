@@ -4,9 +4,9 @@ BasePath : http://IP:8080/imp/
 
 **1.获取用户注册短信验证码**
 
-`接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724&verifyCode=abcd`
+`接口名：userController!getSMSVerifyCode.action?userName=Karl&phoneNum=15986793724&verifyCode=abcd`
 
-`参数： phoneNum 电话号码 verifyCode 图片验证码`
+`参数：userName 用户名 phoneNum 电话号码 verifyCode 图片验证码`
 
 `返回数据：`
 ```javascript
@@ -31,26 +31,6 @@ BasePath : http://IP:8080/imp/
 `返回数据:`
 
 `验证码图片流`
-
-**3.验证用户名是否已被注册过**
-
-`接口名：userController!isUserNameExists.action?userName=karl`
-
-`参数：userName 用户名`
-
-`返回数据:`
-
-```javascript
-{
-	"message": "该用户名未被使用，可以注册",
-	"success": true
-}
-
-{
-	"message": "该用户名已被注册过，请更换其他用户名",
-	"success": false
-}
-```
 
 **4.用户注册**
 
