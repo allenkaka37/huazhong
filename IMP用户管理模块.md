@@ -2,7 +2,7 @@
 
 BasePath : http://IP:8080/imp/
 
-**1.获取短信验证码**
+**1.获取用户注册短信验证码**
 
 `接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724`
 
