@@ -99,7 +99,7 @@ BasePath : http://IP:8080/imp/
 
 **7.修改密码**
 
-`接口名：userController!resetPassword.action?oldPassword=123456&newPassword=111111&smsVerifycode=778111`
+`接口名：userController!editPassword.action?oldPassword=123456&newPassword=111111&smsVerifycode=778111`
 
 `参数：oldPassword 旧密码 newPassword 新密码 smsVerifycode 短信验证码 `
 
