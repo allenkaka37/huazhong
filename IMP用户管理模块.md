@@ -138,7 +138,7 @@ BasePath : http://IP:8080/imp/
 
 **9.获取忘记密码重置的验证码**
 
-`接口名：userController!getResetPwdSMSVerifyCode.action?userName=karl&phoneNum=15986793724`
+`接口名：userController!getResetPwdSMSVerifyCode.action?userName=karl&phoneNum=15986793724&verifyCode=abcd`
 
 `参数：userName 用户名 phoneNum 电话号码`
 
