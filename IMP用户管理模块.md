@@ -18,7 +18,7 @@ BasePath : http://IP:8080/imp/
 }
 
 {
-	"message": "注册用户名必须为手机号码", 错误信息
+	"message": "注册手机号码格式不正确", 错误信息
 	"success": false 失败返回数据
 }
 ```
