@@ -54,9 +54,9 @@ BasePath : http://IP:8080/imp/
 
 **4.用户注册**
 
-`接口名：userController!userRegister.action?userName=karl&phoneNum=15986793724&password=123456&smsVerifycode=9527&verifyCode=abcd`
+`接口名：userController!userRegister.action?userName=karl&phoneNum=15986793724&password=123456&smsVerifycode=9527`
 
-`参数：userName 用户名 password 密码 phoneNum 电话号码 smsVerifycode 短信验证码 verifyCode 图片验证码`
+`参数：userName 用户名 password 密码 phoneNum 电话号码 smsVerifycode 短信验证码`
 
 `返回数据:`
 ```javascript
