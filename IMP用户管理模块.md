@@ -33,7 +33,7 @@ BasePath : http://IP:8080/imp/
 `验证码图片流`
 
 
-**3. 验证将要注册的用户名及手机号码是否被注册过 **
+**3. 验证将要注册的用户名及手机号码是否被注册过**
 
 `接口名：userController!verifyRegisterInfo.action?userName=Karl&phoneNum=15986793724`
 
@@ -48,7 +48,7 @@ BasePath : http://IP:8080/imp/
 
 {
 	"message": "该用户名已被注册过，请更换其他用户名
-	"success": false 失败返回数据
+	"success": false
 }
 ```
 
