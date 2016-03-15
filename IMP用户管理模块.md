@@ -2,6 +2,23 @@
 
 BasePath : http://IP:8080/imp/
 
+requestIsLegal
+
+**0. 判断是否登录状态**
+
+`接口名：companyController!requestIsLegal.action`
+
+`参数：无`
+
+`返回数据：`
+```javascript
+{
+	"message": "", 
+	"success": true
+}
+```
+
+
 **1.获取用户注册短信验证码**
 
 `接口名：userController!getSMSVerifyCode.action?phoneNum=15986793724&verifyCode=abcd`
