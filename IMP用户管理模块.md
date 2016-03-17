@@ -171,3 +171,25 @@ requestIsLegal
 	"success": false
 }
 ```
+
+**10.获取当前登录的用户信息**
+
+`接口名：userController!currentUserInfo.action`
+
+`参数：无`
+
+`返回数据:`
+```javascript
+{
+	"data": {
+		userName : xxx
+		phoneNum : xxx
+	},
+	"success": true
+}
+
+{
+	"message": "系统异常",
+	"success": false
+}
+```
