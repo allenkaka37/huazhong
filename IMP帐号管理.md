@@ -60,7 +60,7 @@ BasePath : http://IP:8080/imp/
 
 ```javascript
 {
-	"data": [{
+	"resultList": [{
 		"pageSize": 20,
 		"currentPage": 1,
 		"topCount": null,
@@ -77,22 +77,63 @@ BasePath : http://IP:8080/imp/
 		},
 		"success": null,
 		"message": null,
-		"id": 1,
+		"$eq_accountId": null,
+		"$payStatus": "支付成功",
+		"$isRecharge": "消费",
+		"$serviceType": "短信",
+		"id": 2,
 		"payStatus": 1,
-		"createTime": "2016-03-05 14:44:35",
-		"payTime": null,
+		"createTime": "2016-03-08 11:14:49",
+		"payTime": "2016-03-08 11:14:49",
+		"accountId": 1,
+		"isRecharge": 0,
+		"serviceId": null,
+		"serviceType": 2,
+		"serialNumber": "1457406889",
+		"price": 90.0,
+		"amount": null,
+		"summary": "购买短信",
+		"alipayTradeNo": null,
+		"alipayBuyerEmail": null,
+		"sortColumnsString": ""
+	},
+	{
+		"pageSize": 20,
+		"currentPage": 1,
+		"topCount": null,
+		"sortColumns": null,
+		"cmd": null,
+		"queryDynamicConditions": {
+			
+		},
+		"sortedConditions": {
+			
+		},
+		"dynamicProperties": {
+			
+		},
+		"success": null,
+		"message": null,
+		"$eq_accountId": null,
+		"$payStatus": "支付成功",
+		"$isRecharge": "充值",
+		"$serviceType": null,
+		"id": 10,
+		"payStatus": 1,
+		"createTime": "2016-03-18 15:31:57",
+		"payTime": "2016-03-18 15:33:09",
 		"accountId": 1,
 		"isRecharge": 1,
 		"serviceId": null,
 		"serviceType": null,
-		"serialNumber": "1457160274",  流水号
+		"serialNumber": "1458286316",
 		"price": 0.01,
 		"amount": null,
 		"summary": "充值",
-		"alipayTradeNo": null,
-		"alipayBuyerEmail": null,
+		"alipayTradeNo": "2016031821001004870279853794",
+		"alipayBuyerEmail": "15986793724",
 		"sortColumnsString": ""
 	}],
-	"success": true
+	"totalCount": 2
 }
 ```
