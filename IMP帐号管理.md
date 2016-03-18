@@ -52,9 +52,9 @@ BasePath : http://IP:8080/imp/
 
 **3.获取当前用户的订单信息**
 
-`接口名：accountController!getOrderList.action`
+`接口名：accountController!getOrderList.action?currentPage=1&pageSize=20`
 
-`参数：无`
+`参数：currentPage 当前页码 pageSize 每页数量`
 
 `返回数据:`
 
@@ -85,7 +85,7 @@ BasePath : http://IP:8080/imp/
 		"isRecharge": 1,
 		"serviceId": null,
 		"serviceType": null,
-		"serialNumber": "1457160274",
+		"serialNumber": "1457160274",  流水号
 		"price": 0.01,
 		"amount": null,
 		"summary": "充值",
