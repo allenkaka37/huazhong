@@ -78,19 +78,19 @@ BasePath : http://IP:8080/imp/
 		"success": null,
 		"message": null,
 		"$eq_accountId": null,
-		"$payStatus": "支付成功",
-		"$isRecharge": "消费",
-		"$serviceType": "短信",
+		"$serviceType": "短信", //产品
+		"$payStatus": "支付成功", //状态
+		"$isRecharge": "消费", //订单类型
 		"id": 2,
 		"payStatus": 1,
-		"createTime": "2016-03-08 11:14:49",
-		"payTime": "2016-03-08 11:14:49",
+		"createTime": "2016-03-08 11:14:49", //创建时间
+		"payTime": "2016-03-08 11:14:49", //支付时间
 		"accountId": 1,
 		"isRecharge": 0,
 		"serviceId": null,
 		"serviceType": 2,
-		"serialNumber": "1457406889",
-		"price": 90.0,
+		"serialNumber": "1457406889", //流水号
+		"price": 90.0, //金额
 		"amount": null,
 		"summary": "购买短信",
 		"alipayTradeNo": null,
