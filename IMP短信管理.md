@@ -49,9 +49,9 @@ BasePath : http://IP:8080/imp/
 
 **3.获得短信发送记录列表**
 
-`接口名：SMScontroller!getSMSRecords.action?currentPage=1&pageSize=20`
+`接口名：SMScontroller!getSMSRecords.action?currentPage=1&pageSize=20&phoneNums=1212123`
 
-`参数：currentPage 当前页码 pageSize 每页记录条数`
+`参数：currentPage 当前页码 pageSize 每页记录条数 phoneNums(可选查选条件) 电话号码`
 
 `返回数据:`
 
