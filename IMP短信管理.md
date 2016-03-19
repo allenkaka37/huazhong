@@ -74,15 +74,45 @@ BasePath : http://IP:8080/imp/
 		},
 		"success": null,
 		"message": null,
+		"$eq_accountId": null,
+		"$like_phoneNums": null,
 		"id": 2,
-		"phoneNums": "15986793724,13480117676",
-		"content": "三三四四嗖嗖嗖",
+		"phoneNums": "15986793724,13480117676", //手机号码
+		"content": "三三四四嗖嗖嗖", //内容
 		"countNum": 2,
 		"smsCost": 0.18,
 		"accountId": 1,
-		"createTime": "2016-03-08 11:23:50",
+		"createTime": "2016-03-08 11:23:50", //发送时间
+		"sortColumnsString": ""
+	},
+	{
+		"pageSize": 20,
+		"currentPage": 1,
+		"topCount": null,
+		"sortColumns": null,
+		"cmd": null,
+		"queryDynamicConditions": {
+			
+		},
+		"sortedConditions": {
+			
+		},
+		"dynamicProperties": {
+			
+		},
+		"success": null,
+		"message": null,
+		"$eq_accountId": null,
+		"$like_phoneNums": null,
+		"id": 3,
+		"phoneNums": "15986793724,13480117676,13560792616",
+		"content": "AAAAA",
+		"countNum": 3,
+		"smsCost": 0.27,
+		"accountId": 1,
+		"createTime": "2016-03-08 11:34:14",
 		"sortColumnsString": ""
 	}],
-	"totalCount": 1
+	"totalCount": 2
 }
 ```
