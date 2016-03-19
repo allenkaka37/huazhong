@@ -52,9 +52,9 @@ BasePath : http://IP:8080/imp/
 
 **3.获取当前用户的订单信息**
 
-`接口名：accountController!getOrderList.action?currentPage=1&pageSize=20`
+`接口名：accountController!getOrderList.action?currentPage=1&pageSize=20&startTime=xxx&endTime=xxx&serviceType=1`
 
-`参数：currentPage 当前页码 pageSize 每页数量`
+`参数：currentPage 当前页码 pageSize 每页数量 startTime(查询条件) 开始时间(查询条件) endTime 结束时间(查询条件) serviceType 服务类型(查询条件)`
 
 `返回数据:`
 
@@ -136,4 +136,28 @@ BasePath : http://IP:8080/imp/
 	}],
 	"totalCount": 2
 }
+```
+
+
+**4. 产品下拉框**
+
+`接口名：accountController!getServiceTypeName.action`
+
+`参数：无`
+
+`返回数据:`
+
+```javascript
+[{
+	"ItemValue": 1,
+	"ItemText": "包月"
+},
+{
+	"ItemValue": 2,
+	"ItemText": "短信"
+},
+{
+	"ItemValue": 3,
+	"ItemText": "营销"
+}]
 ```
