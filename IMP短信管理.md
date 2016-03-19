@@ -51,7 +51,7 @@ BasePath : http://IP:8080/imp/
 
 `接口名：SMScontroller!getSMSRecords.action?currentPage=1&pageSize=20&phoneNums=1212123`
 
-`参数：currentPage 当前页码 pageSize 每页记录条数 phoneNums(可选查选条件) 电话号码`
+`参数：currentPage 当前页码 pageSize 每页记录条数 phoneNums(查询条件) 电话号码 startTime(查询条件) 开始时间 endTime(查询条件) 结束时间 content(查询条件) 短信内容`
 
 `返回数据:`
 
