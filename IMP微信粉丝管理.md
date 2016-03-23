@@ -142,3 +142,41 @@ BasePath : http://IP:8080/imp/
 	"success": true
 }
 ```
+
+** 3.分组下拉列表 **
+
+`接口名：mpwxgroupController!getGroupName.action?mpUserName=gh_853df56d4234`
+
+`参数: mpUserName 公众号原始ID`
+
+`返回数据:`
+
+```javascript
+[{
+	"ItemValue": 0,
+	"ItemText": "未分组"
+},
+{
+	"ItemValue": 1,
+	"ItemText": "黑名单"
+},
+{
+	"ItemValue": 2,
+	"ItemText": "星标组"
+}]
+```
+
+** 4.移动用户到分组 **
+
+`接口名：mpwxgroupController!moveUser2Group.action?mpUserName=gh_853df56d4234&openid_list=['oFT-8wnu0KQ72Z_i3x0WXObtPoqc','oFT-8wq2HlQAYL0SIyhRPpM-mbpQ']&to_groupid=114`
+
+`参数: mpUserName 公众号原始ID openid_list 要移动的粉丝openid list to_groupid 移动到组的ID`
+
+`返回数据:`
+
+```javascript
+{
+	"message": "",
+	"success": true
+}
+```
