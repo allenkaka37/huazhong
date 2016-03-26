@@ -1,7 +1,5 @@
 BasePath : http://IP:8080/imp/
 
-**测试阶段无法获取登录用户,只调用接口请求数据时,所有接口请求时加入参数 isTest=true, 使用默认用户 id=1**
-
 **1.添加营销活动**
 ```javascript
 接口名称:  activityController!saveActivityInfo.action
@@ -14,7 +12,7 @@ BasePath : http://IP:8080/imp/
 	registerType		注册方式:1-手机号,2-邮箱
 	sendFlag		是否发送用户记录至第三方.1-发送,0-不发
 	sendUrl			第三方的接收消息地址
-	shortDescription	下载类的简要描述,可做关注类的标题
+	shortDescription	下载类的简要描述
 	appStoreId		苹果应用商店id
 	tencentStore		腾讯应用宝地址
 	androidUrl		安卓下载地址
@@ -23,7 +21,10 @@ BasePath : http://IP:8080/imp/
 	icon			应用图标:type=1公众号图标,type=2||3应用图标
 	banner			应用横幅:type=3时下载类型的应用banner
 	focusBackground		公众号关注类型活动需上传的页面底图
-	focusPackage		共周后关注类型活动需上传的礼品包图片
+	focusPackage		公众号关注类型活动需上传的礼品包图片
+	shareIcon		分享消息中的图标
+	shareTitle		分享消息中的标题
+	shareDesc		分享消息中的描述
 返回数据:
 	成功示例:
 	{
@@ -57,7 +58,10 @@ BasePath : http://IP:8080/imp/
 			sortColumnsString: "",
 			remark:"",
 			focusPackage:"",
-			focusBackground:""
+			focusBackground:"",
+			shareIcon:"",
+			shareTitle:"",
+			shareDesc:""
 		},
 		"success": true
 	}
@@ -95,6 +99,9 @@ BasePath : http://IP:8080/imp/
 	banner			应用横幅:下载类的应用banner
 	focusBackground		公众号关注类型活动需上传的页面底图
 	focusPackage		共周后关注类型活动需上传的礼品包图片
+	shareIcon		分享消息中的图标
+	shareTitle		分享消息中的标题
+	shareDesc		分享消息中的描述
 返回数据:
 	成功示例:
 	{
@@ -128,7 +135,10 @@ BasePath : http://IP:8080/imp/
 			sortColumnsString: "",
 			remark:"",
 			focusPackage:"",
-			focusBackground:""
+			focusBackground:"",
+			shareIcon:"",
+			shareTitle:"",
+			shareDesc:""
 		},
 		"success": true
 	}
@@ -192,7 +202,10 @@ BasePath : http://IP:8080/imp/
 			sortColumnsString: "",
 			remark:"",
 			focusPackage:"",
-			focusBackground:""
+			focusBackground:"",
+			shareIcon:"",
+			shareTitle:"",
+			shareDesc:""
 		},
 		"success": true
 	}
@@ -250,6 +263,9 @@ BasePath : http://IP:8080/imp/
 					focusPackage: null,
 					remark: null,
 					createDate: null,
+					shareIcon:"",
+					shareTitle:"",
+					shareDesc:""
 				},
 				{
 					id: 17,
@@ -283,6 +299,9 @@ BasePath : http://IP:8080/imp/
 					focusPackage: null,
 					remark: null,
 					createDate: "2016-03-04 16:47:43",
+					shareIcon:"",
+					shareTitle:"",
+					shareDesc:""
 				}
 			],
 			totalCount: 2
