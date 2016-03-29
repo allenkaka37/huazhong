@@ -178,7 +178,7 @@ BasePath : http://IP:8080/imp/
 			name: "jubaopen45",
 			supId: null,
 			type: "1",
-			status: "1",
+			status: "1", (1:待审核,	2:审核通过待支付,3:审核不通过,4支出成功已上架,5:已下架)
 			maxmember: 2000,
 			price: null,
 			guideUrl: null,
