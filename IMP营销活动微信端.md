@@ -117,6 +117,7 @@ BasePath : http://IP:PORT/imp
 ```
 
 ** 4. 用户为某个活动点赞**
+
 `一个用户只允许对一个活动进行一次点赞,如果获取应用详情时返回用户已赞,则页面上屏蔽点赞功能`
 
 `接口名 : activityClientController!clickPraise.action?id=1&openId=lizhijie`
