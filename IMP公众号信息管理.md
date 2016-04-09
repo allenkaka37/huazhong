@@ -10,24 +10,35 @@ BasePath : http://IP:8080/imp/
 返回数据：
 ```javascript
 {
-    "data": [
-        {
-            "id": 9,
-            "nickName": "HSTimesTest",
-            "headImg": "http://wx.qlogo.cn/mmopen/fAjl32tMuq2Hh75VpRnIn01PcJ3o598CMCru8BmwV8FFD12Vf4icyrfTrLgN1xL30xibkZiavYA1br9Kmpia9gUj1OHSfZ04MmnW/0",
-            "mpUserName": "gh_853df56d4234"
-        },
-        {
-            "id": 10,
-            "nickName": "HSTimesTest",
-            "headImg": "http://wx.qlogo.cn/mmopen/fAjl32tMuq2Hh75VpRnIn01PcJ3o598CMCru8BmwV8FFD12Vf4icyrfTrLgN1xL30xibkZiavYA1br9Kmpia9gUj1OHSfZ04MmnW/0",
-            "mpUserName": "gh_853df56d4234"
-        }
-    ],
+    "data": {
+        "resultList": [
+            {
+                "id": 24,
+                "appId": null,
+                "nickName": "HSTimesTest",
+                "headImg": "http://wx.qlogo.cn/mmopen/fAjl32tMuq2Hh75VpRnIn01PcJ3o598CMCru8BmwV8FFD12Vf4icyrfTrLgN1xL30xibkZiavYA1br9Kmpia9gUj1OHSfZ04MmnW/0",
+                "serviceType": null,
+                "verifyType": null,
+                "userName": "gh_853df56d4234",
+                "qrcodeUrl": null
+            },
+            {
+                "id": 23,
+                "appId": null,
+                "nickName": "HSTimesTest",
+                "headImg": "http://wx.qlogo.cn/mmopen/fAjl32tMuq2Hh75VpRnIn01PcJ3o598CMCru8BmwV8FFD12Vf4icyrfTrLgN1xL30xibkZiavYA1br9Kmpia9gUj1OHSfZ04MmnW/0",
+                "serviceType": null,
+                "verifyType": null,
+                "userName": "gh_853df56d4234",
+                "qrcodeUrl": null
+            }
+        ],
+        "totalCount": 15
+    },
     "success": true
 }
 ```
-数据字段含义
+数据字段含义 resultList ： 数据列表 totalCount ：查询总数
 id ：主键 nickName ： 公众号昵称 headImg ： 公众号头像 mpUserName ： 公众号原始id
 
 2.获取公众号信息
