@@ -83,7 +83,7 @@ mediaLogoFileName：缩略图文件名
 replyIds：单图文素材id 样例:1,2,3 
 
 返回数据:
-
+{"message":"添加成功","success":true}
 
 
 
