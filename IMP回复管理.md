@@ -78,4 +78,34 @@ multiMediaId:被修改多图文主键id
 replyId ： 回复Id
 
 5.获取某个回复的详情
+接口名：reply/replyManager!getReplyById.action
+参数：
+replyId 回复id
+返回参数：
+``` javascript
+{
+    "data": {
+        "id": 11,
+        "matchType": 1,
+        "keyWord": "testkeyword",
+        "status": 1,
+        "title": "testtitle",
+        "replyType": 3,
+        "content": null,
+        "mediaId": 1
+    },
+    "success": true
+}
+```
+参数说明:
+id :主键序列号
+matchType ：匹配类型 1:完全匹配2:模糊匹配 (仅非关注回复)
+keyWord ：关键字
+status ： 是否启用 1：启用 0：不启用
+replyType ：回复类型1:文本回复2:图文回复3:多图文回复
+content : 回复文本内容（仅文本回复有效）
+mediaId : 回复媒体Id
+isSubscribe : 是否是关注回复 1：关注回复 0：普通回复
 
+6.上传回复富文本内容的图片
+同媒体素材接口中的上传图片接口
