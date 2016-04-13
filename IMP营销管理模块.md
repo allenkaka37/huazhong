@@ -27,6 +27,7 @@ BasePath : http://IP:8080/imp/
 	shareDesc		分享消息中的描述
 	joinModuleId		参与活动时使用的模板id
 	registerExchangeAdd	注册兑奖页面广告
+	weChatQRCode		公众号的关注二维码
 返回数据:
 	成功示例:
 	{
