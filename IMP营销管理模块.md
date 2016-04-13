@@ -25,6 +25,8 @@ BasePath : http://IP:8080/imp/
 	shareIcon		分享消息中的图标
 	shareTitle		分享消息中的标题
 	shareDesc		分享消息中的描述
+	joinModuleId		参与活动时使用的模板id
+	registerExchangeAdd	注册兑奖页面广告
 返回数据:
 	成功示例:
 	{
