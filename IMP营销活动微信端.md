@@ -71,9 +71,9 @@ BasePath : http://IP:PORT/imp
 
 ** 2. 用户参与某个活动**
 
-`接口名 : activityClientController!joinActivity.action?id=1&openId=lizhijie&phoneNum=13560792616&mail=`
+`接口名 : activityClientController!joinActivity.action?id=1&openId=lizhijie&phoneNum=13560792616&mail=&express=yuantong`
 
-`参数描述 : id -- 活动的id 从页面地址中获取activityId参数值; openId -- 用户的openId 从页面地址中获取openId参数值; phoneNum -- 用户输入的手机号; mail -- 用户输入的邮箱地址`
+`参数描述 : id -- 活动的id 从页面地址中获取activityId参数值; openId -- 用户的openId 从页面地址中获取openId参数值; phoneNum -- 用户输入的手机号; mail -- 用户输入的邮箱地址; express -- 快递公司编码,从页面地址中获取express值`
 
 
 `返回数据 :`
@@ -95,9 +95,9 @@ BasePath : http://IP:PORT/imp
 
 ** 3. 兑换奖品接口**
 
-`接口名 : activityClientController!exchageForFocus.action?id=1&openId=lizhijie`
+`接口名 : activityClientController!exchageForFocus.action?id=1&openId=lizhijie&expressNum=12323231343`
 
-`参数描述 : id -- 活动的id 从页面地址中获取activityId参数值; openId -- 用户的openId 从页面地址中获取openId参数值`
+`参数描述 : id -- 活动的id 从页面地址中获取activityId参数值; openId -- 用户的openId 从页面地址中获取openId参数值; expressNum : 快递单号(根据需求选填),通过调用微信扫码获取`
 
 `返回数据 :`
 ```javascript
@@ -132,3 +132,31 @@ BasePath : http://IP:PORT/imp
 	}
 ```
 
+** 5. 获取微信用户信息**
+
+`接口名 : activityClientController!queryWxUserInfo.action?openId=oFT-8wsyXIfLxAQdPmIn5OfInuZU`
+
+`参数描述 : openId -- 用户的openId 从页面地址中获取openId参数值`
+
+`返回数据 :`
+```javascript
+	{
+	data: {
+		headImgUrl: "http://wx.qlogo.cn/mmopen/SYeWkon6C6IVsCLNByK2GiaT92wd2hHbuDZ0yCFhzGTINQGGeKCnNELnn8iaXfH5pLkOAZXswjlBPhXCdw0HnhRvGNX6KTpctf/0",
+		sex: "男",
+		nickname: "高康琦",
+		remark: "",
+		unionId: "",
+		subscribeTime: 0,
+		city: "深圳",
+		country: "中国",
+		groupId: 0,
+		subscribe: false,
+		sexId: 1,
+		province: "广东",
+		language: "zh_CN",
+		openId: "oFT-8wsyXIfLxAQdPmIn5OfInuZU"
+	},
+	success: true
+	}												
+```
