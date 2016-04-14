@@ -160,3 +160,25 @@ BasePath : http://IP:PORT/imp
 	success: true
 	}												
 ```
+
+** 6. 获取分享Ticket**
+`接口名 : activityClientController!queryJSAPITicket.action?signatureUrl=`
+
+`参数描述 : signatureUrl -- 分享的页面地址`
+ 
+`返回数据 :`
+```javascript
+	{
+	data: {
+		appId: "wxce667fae30580d88",
+		signatureDetail: {
+		appid: "wxce667fae30580d88",
+		noncestr: "WA1yZcojWSGud4yX",
+		timestamp: 1460615941,
+		url: "5amg.cn",
+		signature: "b16016d8964d46290806b7d6c12a2c06cf6eef2a"
+		}
+	},
+	success: true
+	}											
+```
