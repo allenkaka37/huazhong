@@ -7,6 +7,7 @@ BasePath : http://IP:8080/imp/
 请求参数：无
 
 返回结果:
+``` javascript
 {
     "data": {
         "redirect_uri": "http://johnccheng.huazhongtimes.com/imp/author/tpPlatformAuthor!wxMpPreAuthorCallBack.action", //无作用 忽视
