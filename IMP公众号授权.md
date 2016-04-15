@@ -14,7 +14,7 @@ BasePath : http://IP:8080/imp/
         "preAuthCode": "preauthcode@@@yee7bs_GFobGRH7A5kTeI7y8h4mJCnmhjW4dSMYH_O3CwclgpUo2WHZlOP7hOEP1", //托管平台预授权码
         "expiresTime": 1460701351524, //失效时间
         "componentAppid": "wxa0833b06b5cd5f8e", //组建ID
-        "userId":当前发起授权的用户ID
+        "userId":1234 //当前发起授权的用户ID
     },
     "success": true
 }
