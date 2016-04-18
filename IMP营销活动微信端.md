@@ -34,6 +34,8 @@ BasePath : http://IP:PORT/imp
 		focusBackground: null,	//关注类活动参与页面的背景图
 		focusPackage: null,	//关注类活动参与页面的红包图
 		createDate: "2016-04-01 14:41:38",	//活动的创建时间
+		registerExchangeAd:"",	//注册兑奖页面广告
+		weChatQRCode:"",	//公众号的关注二维码
 		order: {	//用户的参与状态对象, order=null 则用户为参与
 			money: null,	//当活动奖品为随机红包时,该字段为用户得到的现金数,单位:分
 			phoneNum: "",	//用户报名使用的手机号
