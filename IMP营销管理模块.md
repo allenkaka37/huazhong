@@ -210,7 +210,8 @@ BasePath : http://IP:8080/imp/
 			focusBackground:"",
 			shareIcon:"",
 			shareTitle:"",
-			shareDesc:""
+			shareDesc:"",
+			priview:""	//预览二维码地址
 		},
 		"success": true
 	}
@@ -270,7 +271,8 @@ BasePath : http://IP:8080/imp/
 					createDate: null,
 					shareIcon:"",
 					shareTitle:"",
-					shareDesc:""
+					shareDesc:"",
+					priview:""	//预览二维码地址
 				},
 				{
 					id: 17,
@@ -307,6 +309,7 @@ BasePath : http://IP:8080/imp/
 					shareIcon:"",
 					shareTitle:"",
 					shareDesc:""
+					priview:""	//预览二维码地址
 				}
 			],
 			totalCount: 2
