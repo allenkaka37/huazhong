@@ -40,17 +40,17 @@ isUseMaterial ： 是否使用已有素材 0：不使用 1：使用
 content ：回复内容 （富文本）
 status : 开启状态 0:未开启 1: 开启
 title : 回复标题
-imageTextTitle : 图文回复标题 (仅图文回复)
+imageTextTitle : 图文回复标题 (仅单图文回复)
 isSubscribe : 是否是关注 0 : 普通回复 1： 关注回复
-digest ： 图文回复描述  (仅图文回复)
+digest ： 图文回复描述  (仅单图文回复)
 matchType ： 匹配类型 1:完全匹配2:模糊匹配 (仅非关注回复)
 
 mediaId：选择已有素材的素材Id （仅isUseMaterial=1时有效）
-author : 图文素材的作者
-sourceUrl ： 图文素材的原文链接 
-showCoverPic ：正文是否显示缩略图 0：不显示 1：显示
-mediaLogo ： 缩略图文件 File类型
-mediaLogoFileName : 缩略图文件名
+author : 图文素材的作者 (仅单图文回复)
+sourceUrl ： 图文素材的原文链接  (仅单图文回复)
+showCoverPic ：正文是否显示缩略图 0：不显示 1：显示 (仅单图文回复)
+mediaLogo ： 缩略图文件 File类型 (仅单图文回复)
+mediaLogoFileName : 缩略图文件名 (仅单图文回复)
 mediaIds ： 多图文素材中的媒体Id(仅多图回复有效)
 
 返回数据:
@@ -84,27 +84,19 @@ replyId 回复id
 ``` javascript
 {
     "data": {
-        "id": 11,
-        "matchType": 1,
-        "keyWord": "testkeyword",
-        "status": 1,
-        "title": "testtitle",
-        "replyType": 3,
-        "content": null,
-        "mediaId": 1
+        "id": 11, //主键序列号
+        "matchType": 1, //匹配类型 1:完全匹配2:模糊匹配 (仅非关注回复)
+        "keyWord": "testkeyword", // 关键字(仅非关注回复)
+        "status": 1, 是否启用 1：启用 0：不启用
+        "title": "testtitle", //回复标题
+        "replyType": 3, //回复类型1:文本回复2:图文回复3:多图文回复(仅非关注回复)
+        "content": null, //回复内容（仅文本回复或者文本关注）
+        "mediaId": 1, //回复素材ID
+        "isSubscribe": 1 //是否是关注回复 1：关注回复 0：普通回复
     },
     "success": true
 }
 ```
-参数说明:
-id :主键序列号
-matchType ：匹配类型 1:完全匹配2:模糊匹配 (仅非关注回复)
-keyWord ：关键字
-status ： 是否启用 1：启用 0：不启用
-replyType ：回复类型1:文本回复2:图文回复3:多图文回复
-content : 回复文本内容（仅文本回复有效）
-mediaId : 回复媒体Id
-isSubscribe : 是否是关注回复 1：关注回复 0：普通回复
 
 6.上传回复富文本内容的图片
 同媒体素材接口中的上传图片接口
