@@ -4,7 +4,7 @@ BasePath : http://IP:8080/imp/
 
 接口名：mediaManager/mediaManager!queryMediaList.action
 
-参数： replyType : 媒体素材类型 2:单图文回复 3：多图文回复  mpUserName：公众号原始Id
+参数： mediaType : 媒体素材类型 2:单图文回复 3：多图文回复  mpUserName：公众号原始Id
 单图文类型返回数据
 ``` javascript 
 {
