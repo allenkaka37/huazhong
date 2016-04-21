@@ -9,13 +9,13 @@ mpUserName : 公众号原始id
 {
     "data": [
         {
-            "id": 12,
-            "title": "testtitle",
-            "status": 1,
-            "createTime": 1459841401000,
-            "isSubscribe": 1,
-            "matchType": 1,
-            "replyType": 2
+            "id": 12, //回复主键id
+            "title": "testtitle", //回复标题
+            "status": 1, //状态 0 未启用1启用 
+            "createTime": 1459841401000,  //创建时间
+            "isSubscribe": 1,  //是否是关注回复 1 关注回复 0 普通回复
+            "matchType": 1, //匹配类型1:完全匹配2:模糊匹配
+            "replyType": 2 //回复类型1:文本回复2:图文回复3:多图文回复
         },
         {
             "id": 9,
@@ -30,23 +30,22 @@ mpUserName : 公众号原始id
     "success": true
 }
 ```
-字段说明
-id ：回复主键id title ：回复标题 status ：状态 0 未启用1启用 createTime：创建时间 isSubscribe ： 是否是关注回复 1 关注回复 0 普通回复 matchType : 匹配类型1:完全匹配2:模糊匹配  replyType：回复类型1:文本回复2:图文回复3:多图文回复
 
 2.增加回复
 接口名：reply/replyManager!addReply.action
 参数:
 mpUserName : 微信公众号原始id
 replyType：回复类型1:文本回复2:图文回复3:多图文回复
+isUseMaterial ： 是否使用已有素材 0：不使用 1：使用
 content ：回复内容 （富文本）
 status : 开启状态 0:未开启 1: 开启
 title : 回复标题
-imageTextTitle : 图文关注标题 (仅图文回复)
+imageTextTitle : 图文回复标题 (仅图文回复)
 isSubscribe : 是否是关注 0 : 普通回复 1： 关注回复
 digest ： 图文回复描述  (仅图文回复)
 matchType ： 匹配类型 1:完全匹配2:模糊匹配 (仅非关注回复)
-isUseMaterial ： 是否使用已有素材 0：不使用 1：使用
-mediaId：选择已有素材的素材Id 
+
+mediaId：选择已有素材的素材Id （仅isUseMaterial=1时有效）
 author : 图文素材的作者
 sourceUrl ： 图文素材的原文链接 
 showCoverPic ：正文是否显示缩略图 0：不显示 1：显示
