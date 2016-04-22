@@ -31,12 +31,12 @@ BasePath : http://IP:8080/imp/
 		"$eq_mpUserName": null,
 		"id": 3,
 		"mpUserName": "gh_853df56d4234",
-		"refDate": "2016-04-19",
-		"newUser": 0,
-		"cancelUser": 0,
-		"cumulateUser": 19,
-		"intPageReadUser": 1,
-		"intPageReadCount": 3,
+		"refDate": "2016-04-19", //分析日期
+		"newUser": 0, //新增关注用户数量
+		"cancelUser": 0, //取消关注用户数量
+		"cumulateUser": 19, //总用户量
+		"intPageReadUser": 1, //图文页的阅读人数
+		"intPageReadCount": 3, //图文页的阅读次数  
 		"sortColumnsString": ""
 	},
 	{
