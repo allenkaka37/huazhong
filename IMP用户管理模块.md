@@ -184,6 +184,7 @@ requestIsLegal
 	"data": {
 		userName : xxx
 		phoneNum : xxx
+		companyLogo : xxx
 	},
 	"success": true
 }
