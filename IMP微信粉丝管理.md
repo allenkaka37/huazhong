@@ -47,6 +47,7 @@ BasePath : http://IP:8080/imp/
 		"sexId": 1,
 		"remark": "",
 		"groupId": 0,
+                "$groupName": "未分组", //组名称
 		"sortColumnsString": ""
 	},
 	{
@@ -85,6 +86,7 @@ BasePath : http://IP:8080/imp/
 		"sexId": 1,
 		"remark": "",
 		"groupId": 0,
+                "$groupName": "未分组",
 		"sortColumnsString": ""
 	},
 	{
@@ -123,6 +125,7 @@ BasePath : http://IP:8080/imp/
 		"sexId": 2,
 		"remark": "",
 		"groupId": 0,
+                "$groupName": "未分组",
 		"sortColumnsString": ""
 	}],
 	"totalCount": 3
