@@ -150,3 +150,15 @@ BasePath : http://IP:8080/imp/
 	"success": true
 }
 ```
+
+** 3.删除分组 **
+
+`接口名：mpwxgroupController!doDelete.action?mpUserName=gh_853df56d4234&id=102`
+
+`参数: mpUserName 公众号原始ID | id 组ID`
+
+`返回数据:`
+
+```javascript
+
+```
