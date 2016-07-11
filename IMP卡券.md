@@ -1,0 +1,224 @@
+
+BasePath : http://IP:8080/imp/
+
+** 1. 上传门店中的图片 **
+
+`接口名：wxcardcouponsController!uploadImg.action?mpUserName=gh_853df56d4234`
+
+`参数：`
+
+`mpUserName : 微信原始Id`
+
+`cardPic : file类型 上传图片`
+
+`返回数据：`
+```javascript
+{
+	"error": 0,
+	"url": "http://johnccheng.huazhongtimes.com:8585/imp/upload/cardPic/20160628103631671935.png?url=http://mmbiz.qpic.cn/mmbiz/rprJFXjDm3iciariaNA4vGwo9RqTafp9RFkIehMCSVxgO0RJlAFXM9o4r5Jc7KTA6WrGiaof9Ycb7h1IB5OL2lRTpA/0"
+}
+```
+
+** 2. 创建门店 **
+
+`接口名：wxstoreController!createWxstore.action?mpUserName=gh_853df56d4234&business_name=麦当劳&branch_name=艺苑路店&province=广东省&city=广州市&district=海珠区&address=艺苑路11%20号&telephone=020-12345678&categories=["美食,小吃快餐"]&offset_type=1&longitude=115.32375&latitude=25.097486&photo_list=[{"photo_url":"http://mmbiz.qpic.cn/mmbiz/rprJFXjDm3iciariaNA4vGwo9RqTafp9RFkIehMCSVxgO0RJlAFXM9o4r5Jc7KTA6WrGiaof9Ycb7h1IB5OL2lRTpA/0"}]&recommend=麦辣鸡腿堡套餐，麦乐鸡，全家桶&special=免费wifi，外卖服务&introduction=麦当劳是全球大型跨国连锁餐厅，1940%20年创立于美国，在世界上大约拥有3%20万间分店。&open_time=8:00-20:00&avg_price=35`
+
+`参数：`
+
+`mpUserName : 微信原始Id`
+
+`business_name : 门店名称（仅为商户名，如：国美、麦当劳，不应包含地区、地址、分店名等信息，错误示例：北京国美）`
+
+`branch_name : 分店名称（不应包含地区信息，不应与门店名有重复，错误示例：北京王府井店）`
+
+`province : 门店所在的省份（直辖市填城市名,如：北京市）`
+
+`city : 门店所在的城市`
+
+`district : 门店所在地区`
+
+`address : 门店所在的详细街道地址（不要填写省市信息）`
+
+`telephone : 门店的电话（纯数字，区号、分机号均由“-”隔开）`
+
+`categories : 门店的类型（不同级分类用“,”隔开，如：美食，川菜，火锅。详细分类参见附件：微信门店类目表）`
+
+`offset_type : 坐标类型，1 为火星坐标（目前只能选1）`
+
+`longitude : 门店所在地理位置的经度`
+
+`latitude : 门店所在地理位置的纬度（经纬度均为火星坐标，最好选用腾讯地图标记的坐标）`
+
+`photo_list : 图片列表，url 形式，可以有多张图片，尺寸为640*340px。必须为上一接口生成的url。图片内容不允许与门店不相关，不允许为二维码、员工合照（或模特肖像）、营业执照、无门店正门的街景、地图截图、公交地铁站牌、菜单截图等`
+`格式如下:`
+```javascript
+[{
+	"photo_url": "https:// XXX.com"
+},{
+	"photo_url": "https://XXX.com"
+}]
+```
+
+`special : 特色服务，如免费wifi，免费停车，送货上门等商户能提供的特色功能或服务`
+
+`recommend : 推荐品，餐厅可为推荐菜；酒店为推荐套房；景点为推荐游玩景点等，针对自己行业的推荐内容`
+
+`introduction : 商户简介，主要介绍商户信息等`
+
+`open_time : 营业时间，24 小时制表示，用“-”连接，如 8:00-20:00`
+
+`avg_price : 人均价格，大于0 的整数`
+
+`返回数据：`
+```javascript
+{
+	"message": "创建成功",
+	"success": true
+}
+```
+
+** 3. 经纬度 **
+
+```javascript
+可利用以下工具找到各门店对应的经纬度坐标，导出相应坐标值。
+详见链接：坐标拾取器地址。
+http://lbs.qq.com/tool/getpoint/index.html  
+
+注意：经纬度坐标需要转换为腾讯地图坐标。
+详见链接：
+http://lbs.qq.com/webservice_v1/guide-convert.html 
+```
+
+** 4. 获取门店列表 **
+
+`接口名：wxstoreController!getWxstoreList.action?mpUserName=gh_853df56d4234`
+
+`必填参数：`
+
+`mpUserName : 微信原始Id`
+
+`可选参数：`
+
+`currentPage : 当前页码`
+
+`pageSize : 每页数量`
+
+`返回数据：`
+```javascript
+{
+	"resultList": [{
+		"pageSize": 20,
+		"currentPage": 1,
+		"sid": "201607041419564920515478",
+		"mpUserName": "gh_853df56d4234",
+		"business_name": "麦当劳",
+		"branch_name": "艺苑路店",
+		"province": "广东省",
+		"city": "广州市",
+		"district": "海珠区",
+		"address": "艺苑路11 号",
+		"telephone": "020-12345678",
+		"categories": "美食,小吃快餐",
+		"offset_type": 1,
+		"longitude": 115.324,
+		"latitude": 25.0975,
+		"photo_list": "{\"photo_url\":\"http://mmbiz.qpic.cn/mmbiz/rprJFXjDm3iciariaNA4vGwo9RqTafp9RFkIehMCSVxgO0RJlAFXM9o4r5Jc7KTA6WrGiaof9Ycb7h1IB5OL2lRTpA/0\"}",
+		"recommend": "麦辣鸡腿堡套餐，麦乐鸡，全家桶",
+		"special": "免费wifi，外卖服务",
+		"introduction": "麦当劳是全球大型跨国连锁餐厅，1940 年创立于美国，在世界上大约拥有3 万间分店。",
+		"open_time": "8:00-20:00",
+		"avg_price": 35,
+		"poi_id": "461754711",
+		"auditResult": null,
+		"auditMsg": null,
+		"available_state": 4,
+		"update_status": 0,
+		"createTime": "2016-07-07 11:10:07"
+	},
+	{
+		"pageSize": 20,
+		"currentPage": 1,
+		"sid": "201607071110071219993068",
+		"mpUserName": "gh_853df56d4234",
+		"business_name": "中大产学研基地",
+		"branch_name": "",
+		"province": "广东省",
+		"city": "深圳市",
+		"district": "南山区",
+		"address": "深圳大学南区三栋",
+		"telephone": "15986793724",
+		"categories": "公司企业,公司企业",
+		"offset_type": 1,
+		"longitude": 113.931,
+		"latitude": 22.5276,
+		"photo_list": "{\"photo_url\":\"http://mmbiz.qpic.cn/mmbiz/rprJFXjDm39VpSqjQXUmtXxibzkGTub0vAnnHOV1FXMWyD6Lb1CZJMtCU6HBnK6aYKmoXRLzSz84gaPiaPiaPY9pQ/0?wx_fmt=png\"}",
+		"recommend": "",
+		"special": "的房间看看",
+		"introduction": "",
+		"open_time": "9:30-18:30",
+		"avg_price": 100,
+		"poi_id": "460851074",
+		"auditResult": null,
+		"auditMsg": null,
+		"available_state": 3,
+		"update_status": 0,
+		"createTime": "2016-07-07 11:10:07"
+	}],
+	"totalCount": 2
+}
+```
+
+** 5. 更新门店 **
+
+`接口名：wxstoreController!editWxstore.action?mpUserName=gh_853df56d4234&poi_id=460851074`
+
+`必填参数：`
+
+`mpUserName : 微信原始Id`
+
+`poi_id : 门店审核后的Id`
+
+`选填参数：填写的值会被更改`
+
+`sid : A00001`
+
+`telephone : 020-12345678`
+
+`photo_list : [{"photo_url":"https:// XXX.com"},{"photo_url":"https://XXX.com"}]`
+
+`recommend : 麦辣鸡腿堡套餐，麦乐鸡，全家桶`
+
+`special : 免费wifi，外卖服务`
+
+`introduction : 麦当劳是全球大型跨国连锁餐厅，1940 年创立于美国`
+
+`open_time : 8:00-20:00`
+
+`avg_price : 35`
+
+`返回数据：`
+```javascript
+{
+	"message": "同步成功",
+	"success": true
+}
+```
+
+
+** 6. 删除门店 **
+
+`接口名：wxstoreController!deleteWxstore.action?mpUserName=gh_853df56d4234&poi_id=460851074`
+
+`必填参数：`
+
+`mpUserName : 微信原始Id`
+
+`poi_id : 门店审核后的Id`
+
+`返回数据：`
+```javascript
+{
+	"message": "删除成功",
+	"success": true
+}
+```
