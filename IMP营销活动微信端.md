@@ -44,7 +44,9 @@ BasePath : http://IP:PORT/imp
 			createDate: "2016-03-14 14:26:41",	//用户的参与时间
 			drawDate: null,	//用户领取奖品的时间
 			id: 1457936801148,	//用户参与记录的ID,注册类型的活动在跳转至注册页时需传递
-			token: "5632c6eece913ab85b04d8d68d8720c9"	
+			issue: "", 		//如果奖品为彩票类型, 则该字段表示用户获得的彩票的期号
+			voteNums : "", 		//如果奖品为彩票类型, 则该字段表示用户获得的彩票号码
+			gameCode : "",		//如果奖品为彩票类型, 则该字段表示用户获得的彩票类型
 		},
 		surprise: {	//活动的奖品对象
 			id: 1,	//奖品ID
@@ -52,7 +54,7 @@ BasePath : http://IP:PORT/imp
 			title: "活动礼包",	//奖品title
 			description: "完成活动领取奖励",	//奖品描述
 			imgUrl: null,	//奖品的图片地址
-			type: "2",	//奖品的类型 1:流量直充.2:定额红包.3:随机红包
+			type: "2",	//奖品的类型 1:流量直充.2:定额红包.3:随机红包. 4:定档红包.5:彩票奖励
 			cash: 100,	//定额红包的现金数或随机红包的基数
 			stochastic: 0,	//随机红包的附加值,此时随机红包的区间为 A~A+B
 			ltPackage: "",	//联通号码充值流量数
@@ -65,7 +67,8 @@ BasePath : http://IP:PORT/imp
 		isPraise: 0,	//该用户是否点赞
 		shareIcon: "upload/shareIcon/20160401144138602417.png",	//分享图标
 		shareTitle: "很好的产品哦",	//分享标题
-		shareDesc: "为什么呢"	//分享描述
+		shareDesc: "为什么呢",	//分享描述
+		isUseGee : "F" //是否使用极验证 F -- 否 , T -- 是
 	},
 	success: true
 	}
