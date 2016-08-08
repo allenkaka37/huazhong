@@ -82,20 +82,42 @@ BasePath : http://IP:PORT/imp
 ```
 
 ** 3. 设置用户个人基础信息**
-`接口名 : lotteryController!setUserInfo.action?openId=oFT-8wsyXIfLxAQdPmIn5OfInuZU&mobile=13560792616&cardId=410823198908220195&name=李志杰&bankCardNo=110&bankName=110&bankBranchName=110
+`接口名 : lotteryController!setUserInfo.action?openId=oFT-8wsyXIfLxAQdPmIn5OfInuZU&mobile=13560792616&cardId=410823198908220195&name=李志杰&bankCardNo=110&bankName=110&bankBranchName=110`
 
-`参数描述 : 参考获取用户个人信息返回字段
+`参数描述 : 参考获取用户个人信息返回字段`
  
 `返回数据 :`
 ```javascript
+	//失败情况
 	{
 		message: "银行卡码已被其他用户绑定,请更换!",
 		success: false
 	}
 
-
+	//成功情况
 	{
 		message: "",
 		success: true
 	}	
 ```
+
+**4. 用户提取**
+
+`接口名 : lotteryController!enCash.action?openId=&orderId=`
+`参数描述 : openId -- 用户的openId 从页面地址中获取openId参数值`
+	   `orderId 订单号`
+`返回数据 :`
+```javascript
+	//失败情况
+	{
+		message: "",
+		success: false
+	}
+
+	//成功情况
+	{
+		message: "",
+		success: true
+	}	
+```
+
